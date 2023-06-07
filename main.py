@@ -7,8 +7,8 @@ screen.bgcolor("black")
 screen.title("My snake game")
 screen.tracer(0)
 
+# Creates snake
 segments = []
-
 starting_positions = [(0, 0), (-20, 0), (-40, 0)]
 for position in starting_positions:
     new_segment = Turtle(shape="square")
@@ -17,8 +17,10 @@ for position in starting_positions:
     new_segment.goto(position)
     segments.append(new_segment)
 
+# Moves snake
 game_is_on = True
 while game_is_on:
+    # updates screen after all segments are rendered
     screen.update()
     time.sleep(0.1)
 
